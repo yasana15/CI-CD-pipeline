@@ -1,4 +1,4 @@
-name: Java CI `.github/workflows/ci.yml` file with the added `chmod +x ./gradlew` step:
+name: Java CI `.github/workflows/Update ci.yml` file with the added `chmod +x ./gradlew` step:
 
 ```yaml
 name: Java CI with Gradle
