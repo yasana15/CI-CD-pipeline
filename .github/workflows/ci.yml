@@ -1,74 +1,36 @@
-
 name: Java CI with Gradle
 
 on:
   push:
     branches: [ "main" ]
-  pull with Gradle
-
-on:
-  push:
-    branches: [ "main" ]
-_request:
-    branches: [ "main" ]
-
-jobs:
-  build:
   pull_request:
     branches: [ "main" ]
 
 jobs:
-    runs-on: ubuntu-latest
-    permissions:
-      contents:  build:
+  build:
 
     runs-on: ubuntu-latest
     permissions:
-      read
+      contents: read
 
     steps:
-    - uses: actions/checkout@v4 contents: read
-
-    steps:
-    - uses: actions/checkout
+    - uses: actions/checkout@v4
     - name: Set up JDK 17
-      uses: actions/setup-java@@v4
-    - name: Set up JDK 17
-      uses: actions/setupv4
+      uses: actions/setup-java@v4
       with:
         java-version: '17'
-        distribution:-java@v4
-      with:
-        java-version: 'temurin'
-
-    - name: Setup Gradle
-      '17'
         distribution: 'temurin'
 
-    - name: Setup uses: gradle/actions/setup-gradle@af1da67850ed9 Gradle
-      uses: gradle/actions/setup-gradlea4cedd57bfd976089dd991e2582 # v4.0.0
-
-    - name:@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0. Grant execute permission for Gradle Wrapper
-      run:0
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
     - name: Grant execute permission for gradlew
-      chmod +x ./gradlew
+      run: chmod +x ./gradlew
 
-    - name: Build with Gradle Wrapper run: chmod +x ./gradlew
-
-    - name: Build with Grad
+    - name: Build with Gradle Wrapper
       run: ./gradlew build
 
   dependency-submission:
-    runs-on: ubuntu-latest
-    permissions:
-le Wrapper
-      run: ./gradlew build
-
-  dependency-submission      contents: write
-
-    steps:
-    - uses: actions/checkout:
 
     runs-on: ubuntu-latest
     permissions:
@@ -77,18 +39,10 @@ le Wrapper
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 17
-      uses: actions@v4
-    - name: Set up JDK 17
-      uses: actions/setup/setup-java@v4
+      uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
 
-    - name:-java@v4
-      with:
-        java-version: Generate and submit dependency graph
-      uses: gradle '17'
-        distribution: 'temurin'
-
     - name: Generate and submit dependency graph
-      uses: gradle/actions/dependency-submission@af1da67850ed9a/actions/dependency-submission@af1da67850ed94cedd57bfd976089dd991e2582 # v4.0.0
+      uses: gradle/actions/dependency-submission@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
